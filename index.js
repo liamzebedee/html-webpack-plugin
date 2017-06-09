@@ -1,7 +1,10 @@
 'use strict';
 var vm = require('vm');
 var fs = require('fs');
-var _ = require('lodash');
+var _ = {
+  extend: require('lodash/extend'),
+  uniq: require('lodash/uniq')
+};
 var Promise = require('bluebird');
 var path = require('path');
 var childCompiler = require('./lib/compiler.js');
